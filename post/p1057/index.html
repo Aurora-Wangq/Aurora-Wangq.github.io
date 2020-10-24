@@ -1,8 +1,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta name="description" content="没有关于.
-" />
+    <meta name="description" content="P1057 传球游戏
+#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+using namespace std;
+
+int n,m;
+int f[31][31];
+ 
+int main()
+{
+..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://aurora-wangq.github.io//media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://aurora-wangq.github.io//styles/main.css">
@@ -418,10 +427,10 @@
         <div class="postshow" style="padding-bottom: 0;">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;">
-                <img src="https://aurora-wangq.github.io//post-images/about.jpg" class="postimage" style="cursor:auto">
+                <img src="https://aurora-wangq.github.io//post-images/p1057.jpg" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2019-01-25</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-10-24</div>
                 <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
                 <div class="posttag">
                     
@@ -430,9 +439,9 @@
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>关于</h2>
+                <h2>P1057</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">https://aurora-wangq.github.io/post/about/</div>
+                <div id="pl" style="display:none">https://aurora-wangq.github.io/post/p1057/</div>
                 <div id="rootaddr" style="display:none">https://aurora-wangq.github.io/</div>
                 <span id="hotnum">
                     <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
@@ -440,7 +449,37 @@
                 </span>
             </div>
             <div class="text ">
-                <p>没有关于.</p>
+                <p><a href="https://www.luogu.com.cn/problem/P1057">P1057 传球游戏</a></p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+using namespace std;
+
+int n,m;
+int f[31][31];
+ 
+int main()
+{
+	scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+	
+	f[0][1]=1;
+	
+	for(int i=1; i&lt;=m; i++)
+		for(int j=1; j&lt;=n; j++)
+			if(j==1) 
+				f[i][j]=f[i-1][n]+f[i-1][2];
+				
+			else 
+				if(j==n) 
+					f[i][j]=f[i-1][1]+f[i-1][n-1];
+			
+			else 
+				f[i][j]=f[i-1][j-1]+f[i-1][j+1];
+				
+	printf(&quot;%d&quot;,f[m][1]);
+	
+	return 0;
+}
+</code></pre>
 
             </div>
             <hr style="width: 80%;">
@@ -478,13 +517,25 @@
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>WQJ</li>
-            <li><strong>原文链接：</strong>https://aurora-wangq.github.io/post/about/</li>
+            <li><strong>原文链接：</strong>https://aurora-wangq.github.io/post/p1057/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         <div id="otherpost">
             
+            
+            <div class="next-post-pc">
+                <div id="npcontainer" onclick="window.location.href= 'https://aurora-wangq.github.io/post/jia-gong-gong-jian/';return false">
+                    
+                    <img src="https://aurora-wangq.github.io//post-images/jia-gong-gong-jian.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">加工工件</h4>
+                </div>
+            </div>
+            <div class="next-post">
+                下一篇 <a href="https://aurora-wangq.github.io/post/jia-gong-gong-jian/">加工工件</a>
+            </div>
             
         </div>
     </div>
@@ -792,7 +843,7 @@
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "关于",
+                    title: "P1057",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {
