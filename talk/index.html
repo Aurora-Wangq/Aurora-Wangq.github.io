@@ -23,6 +23,106 @@
 
 
     
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://aurora-wangq.github.io/"
+                    style="font-size:21px">Aurora&nbsp;&nbsp;|&nbsp;&nbsp;</a>
+                <a class="navbar-brand" href=""
+                    style="font-size:15px;font-family:kaiti">WQJ_MKTB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                
+                <div class="search nav navbar-nav" style="margin-top:8px">
+                    <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+                    <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+                    <div class="search-results"></div>
+                </div>
+                
+                <div class="search nav navbar-nav searchtop">
+                <a title="text" onclick="document.getElementById('socialMenu').style.display='block'"><i><img class="social"
+                    src="https://aurora-wangq.github.io//media/images/social.png" alt=""></i></a>
+            </div>
+            <ul class="nav navbar-nav" style="float: right;margin-right:5%">
+                
+                
+                <li>
+                    <a href="/" style="color:white">
+                        首页
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="/archives" style="color:white">
+                        归档
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="/tags" style="color:white">
+                        标签
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="/post/about" style="color:white">
+                        关于
+                    </a>
+                </li>
+                
+                
+                
+                <li>
+                    <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang" style="color:white">
+                        口吐芬芳
+                    </a>
+                </li>
+                
+                
+                
+                  
+                <li><a href="https://aurora-wangq.github.io//friends" style="color:white">友链</a></li>
+                
+                  <li><img src="https://aurora-wangq.github.io//images/avatar.png?v=1603498889078" alt=""
+                class="menutopavatar"></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="socialMenu">
+        <div class="animate">
+            <div class="socialContainer">
+                
+                
+                
+                
+                
+                
+            </div>
+            <div id="qq" style="display:none"></div>
+        </div>
+    </div>
+    <!-- 引入jQuery核心js文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script>
+        var social = document.getElementById('socialMenu');
+        // 鼠标点击模型外区域关闭登录框
+        window.onclick = function (event) {
+            if (event.target == social) {
+                social.style.display = "none";
+            }
+        }
+    </script>
+    
 </body>
 <script>
     //-------------------------------------------------搜索
@@ -229,12 +329,17 @@
           
           
           
-          <li><a href="https://aurora-wangq.github.io/tag/fvu_PxoC_/" target="_blank">
-              CSP2020
-            </a></li>
+          <li>
+            <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang">
+              口吐芬芳
+            </a>
+          </li>
           
           
           
+          
+          <li><a href="https://aurora-wangq.github.io//friends">友链</a></li>
+
           
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -298,10 +403,10 @@
         </div>
         <div id="bg">
         </div>
-        <div id="bgchoice" style="display: none">
+        <div id="bgchoice" style="display: none">link
             </div>
             
-            <div id="bgurl" style="display:none"></div>
+            <div id="bgurl" style="display:none">https://i.loli.net/2020/10/24/SKc3J6i9jZR8tMh.jpg</div>
                
     </div>
     <div id="landlord">
@@ -313,6 +418,16 @@
 
 </html>
         
+            <script type="text/javascript">
+                var message_Path = '/live2d/'
+                var home_Path = document.getElementById("domainname").innerHTML+"/"; //此处修改为你的域名，必须带斜杠
+            </script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
+            <script type="text/javascript" src="https://aurora-wangq.github.io//media/live2d/js/message.js"></script>
+            <script type="text/javascript">
+                loadlive2d("live2d", "https://aurora-wangq.github.io//media/live2d/assets/tororo.model.json");
+            </script>
+            
 
 <script>
         var bgchoice=$('#bgchoice').html();
@@ -334,7 +449,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('');
+        var t = JSON.parse('[]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -366,7 +481,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603447382981">\
+                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603498889078">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -379,7 +494,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603447382981">\
+                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603498889078">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
