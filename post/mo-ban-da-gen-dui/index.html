@@ -24,6 +24,31 @@ void MAX_HEAPIFY(int A[], int i)
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <!-- 数学公式 -->
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+    </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                }
+            ]
+        });
+    </script>
+
+    
     <title>Aurora</title>
     
     <style>
@@ -45,7 +70,7 @@ void MAX_HEAPIFY(int A[], int i)
         <div class="message" style="opacity:0"></div>
         <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
     </div>
-    <div id="codeCopyText" style="display: none">代码复制成功了哦</div>
+    <div id="codeCopyText" style="display: none">你复制我代码？</div>
     <div id="domainname" style="display:none">https://aurora-wangq.github.io/</div>
     <!-- 响应式布局，针对PC端内容显示 -->
     <div id="content">
@@ -170,7 +195,7 @@ void MAX_HEAPIFY(int A[], int i)
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603501166904" class="avatar">
+            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603501525484" class="avatar">
         </div>
         <div class="sitename">Aurora</div>
         <span class="describtion" data-text='["WQJ_MKTB"]'>&nbsp;</span>
@@ -515,34 +540,12 @@ int main()
             </div>
             <hr style="width: 80%;">
             
-            <div class="sharebtnContainer">
-                <button type="button" class="sharebtn">转载分享</button>
-            </div>
-            <div class="shareContainer">
-                <div class="share" style="height:30px;background: white;">
-                    <a class="qq" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/QQ.png" alt=""></i></a>
-                    <a class="wechat" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/wechat.png" alt=""></i></a>
-                    <a class="weibo" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/weibo.png" alt=""></i></a>
-                    <a class="qzone" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/qzone.png" alt=""></i></a>
-                    <a class="douban" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/douban.png" alt=""></i></a>
-                    <a class="facebook" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/facebook.png" alt=""></i></a>
-                    <a class="twitter" href=""><i><img class="shareicon"
-                                src="https://aurora-wangq.github.io//media/images/twitter.png" alt=""></i></a>
-                </div>
-            </div>
-            
             
             <div class="donateContainer">
                 <img src="https://aurora-wangq.github.io//media/images/donate.png" alt="" class="donateImg">
             </div>
             <div class="donateContainer">
-                <img src="" alt="" class="donate">
+                <img src="https://i.loli.net/2020/10/24/sc8mhPKRL4eHvMu.png" alt="" class="donate">
             </div>
             
             <div class="postfooter">
