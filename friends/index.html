@@ -90,13 +90,7 @@
           
           
           
-          <li>
-            <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang">
-              口吐芬芳
-            </a>
-          </li>
-          
-          
+          <li><a href="https://aurora-wangq.github.io//talk">说说</a></li>
           
           
           <li><a href="https://aurora-wangq.github.io//friends">友链</a></li>
@@ -144,7 +138,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603499723285" class="avatar">
+            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603500681612" class="avatar">
         </div>
         <div class="sitename">Aurora</div>
         <span class="describtion" data-text='["WQJ_MKTB"]'>&nbsp;</span>
@@ -205,12 +199,8 @@
     
     
     <div class="mchocie describtion">
-        <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang" class="menubutton">
-            口吐芬芳
-        </a>
+        <a href="https://aurora-wangq.github.io//talk" class="menubutton">说说</a>
     </div>
-    
-    
     
     
     <div class="mchocie describtion">
@@ -379,11 +369,28 @@
     <div id="friendscontainermobile">
         
         
+        <div class="friend-box" onclick="window.location.href= 'https://movetoex.github.io/';return false">
+            <img class="friend-avatar" src="">
+            <div class="flink-info">
+                <a href="https://movetoex.github.io/" class="title" target="_blank">MoveToEx</a>
+                <div style="margin-top:10px"></div>
+                <p>经过加密的博客</p>
+            </div>
+        </div>
+        
         
     </div>
 
     <div id="friendscontainer">
         
+        
+        <div class="background" onclick="window.open('https://movetoex.github.io/');return false">
+            <div class="infoForm">
+                <img class="favatar" src="">
+                <h2>MoveToEx</h2>
+                <h3>经过加密的博客</h3>
+            </div>
+        </div>
         
         
     </div>
@@ -391,7 +398,57 @@
                 <div id="comment" class="fcl" style="background: white;">
                     <div class="commentcontainer">
                         
-                        <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                        <style>
+
+
+    @media screen and (min-width: 1300px) {
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
+    }
+</style>
+
+<body>
+    <div id="vcomments">
+    </div>
+    <script src="https://aurora-wangq.github.io//media/js/valine.min.js"></script>
+    <!-- <script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '0UpJ7NDeKMlJkazHTuYzOjj9-gzGzoHsz',
+            appKey: '9HCfIWJzNBjnvwcIH0VfhsWL',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，何不畅所欲言呢？',
+            visitor: true, // 阅读量统计
+        });
+    </script>
+    <script type="text/javascript">
+        // jinrishici.load(function (result) {
+        //     var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+        //         .dynasty + " · " + result.data.origin.author;
+        //     if (jrsc_plac != undefined)
+        //         document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+        // 
+        var jrsc = '既然来了，何不畅所欲言呢？';
+        jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                 .dynasty + " · " + result.data.origin.author;
+            });
+    </script> 
+    
+</body>
+                        <div class="clear"></div>
                         
                     </div>
                 </div>

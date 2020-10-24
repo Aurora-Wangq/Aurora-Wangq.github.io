@@ -127,13 +127,7 @@ void init()  {
           
           
           
-          <li>
-            <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang">
-              口吐芬芳
-            </a>
-          </li>
-          
-          
+          <li><a href="https://aurora-wangq.github.io//talk">说说</a></li>
           
           
           <li><a href="https://aurora-wangq.github.io//friends">友链</a></li>
@@ -181,7 +175,7 @@ void init()  {
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603499723285" class="avatar">
+            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603500681612" class="avatar">
         </div>
         <div class="sitename">Aurora</div>
         <span class="describtion" data-text='["WQJ_MKTB"]'>&nbsp;</span>
@@ -242,12 +236,8 @@ void init()  {
     
     
     <div class="mchocie describtion">
-        <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang" class="menubutton">
-            口吐芬芳
-        </a>
+        <a href="https://aurora-wangq.github.io//talk" class="menubutton">说说</a>
     </div>
-    
-    
     
     
     <div class="mchocie describtion">
@@ -714,7 +704,7 @@ int main()
             
             <div class="postfooter">
                 <ul class="post-copyright">
-                    <li><strong>文章作者：</strong></li>
+                    <li><strong>文章作者：</strong>WQJ</li>
             <li><strong>原文链接：</strong>https://aurora-wangq.github.io/post/2020-10-14/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
@@ -763,7 +753,57 @@ int main()
                 <div id="comment"  class="comment" style="background: white">
                     <div class="commentcontainer">
                         
-                        <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                        <style>
+
+
+    @media screen and (min-width: 1300px) {
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
+    }
+</style>
+
+<body>
+    <div id="vcomments">
+    </div>
+    <script src="https://aurora-wangq.github.io//media/js/valine.min.js"></script>
+    <!-- <script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '0UpJ7NDeKMlJkazHTuYzOjj9-gzGzoHsz',
+            appKey: '9HCfIWJzNBjnvwcIH0VfhsWL',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，何不畅所欲言呢？',
+            visitor: true, // 阅读量统计
+        });
+    </script>
+    <script type="text/javascript">
+        // jinrishici.load(function (result) {
+        //     var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+        //         .dynasty + " · " + result.data.origin.author;
+        //     if (jrsc_plac != undefined)
+        //         document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+        // 
+        var jrsc = '既然来了，何不畅所欲言呢？';
+        jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                 .dynasty + " · " + result.data.origin.author;
+            });
+    </script> 
+    
+</body>
+                        <div class="clear"></div>
                         
                     </div>
                 </div>
@@ -996,8 +1036,8 @@ int main()
         var rootaddr = $("#rootaddr").html();
         pl = pl.replace(rootaddr, "");
 
-        var appid = '';
-        var appkey = '';
+        var appid = '0UpJ7NDeKMlJkazHTuYzOjj9-gzGzoHsz';
+        var appkey = '9HCfIWJzNBjnvwcIH0VfhsWL';
         console.log(appid, appkey)
         if(AV==undefined)
             AV.init({

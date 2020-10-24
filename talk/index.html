@@ -21,7 +21,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603499723285" class="avatar">
+            <img src="https://aurora-wangq.github.io//images/avatar.png?v=1603500681612" class="avatar">
         </div>
         <div class="sitename">Aurora</div>
         <span class="describtion" data-text='["WQJ_MKTB"]'>&nbsp;</span>
@@ -82,12 +82,8 @@
     
     
     <div class="mchocie describtion">
-        <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang" class="menubutton">
-            口吐芬芳
-        </a>
+        <a href="https://aurora-wangq.github.io//talk" class="menubutton">说说</a>
     </div>
-    
-    
     
     
     <div class="mchocie describtion">
@@ -315,13 +311,7 @@
           
           
           
-          <li>
-            <a href="https://aurora-wangq.github.io/post/kou-tu-fen-fang">
-              口吐芬芳
-            </a>
-          </li>
-          
-          
+          <li><a href="https://aurora-wangq.github.io//talk">说说</a></li>
           
           
           <li><a href="https://aurora-wangq.github.io//friends">友链</a></li>
@@ -427,7 +417,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('[]');
+        var t = JSON.parse('[{"author":"WQJ","img":"","text":"最近好多考试啊","time":"2020-10-24"}]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -459,7 +449,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603499723285">\
+                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603500681612">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -472,7 +462,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603499723285">\
+                        <img class="intro1" src="https://aurora-wangq.github.io//images/avatar.png?v=1603500681612">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
